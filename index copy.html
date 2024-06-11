@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="btns">
+        <div class="container">
+            <div class="container-bgcolor">
+            <div class="btns__menu">
+                
+                <button class="btn home">About me</button>
+                <button class="btn about">Ideas</button>
+                <button class="btn skills">Youtube</button>
+                <button class="btn works">Works</button>
+                <button class="btn contact">SNS</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="home">
+        <div class="wrapper">
+            <h1 class="steve"><img src="img/스티브.png" alt=""></h1>
+            
+            
+            <h3>포토샵과 일러스트레이터를 전문적으로 다루며,프리미어 프로를 통해<br>
+                영상 편집까지 능숙하게 소화할 수 있는<br>
+                다재다능한 디자이너,강찬우입니다.
+            </h3>
+        </div>
+    </section>
+    <section id="about">
+        <div class="wrapper">
+            <h1 class="first">SEE MY IDEAS</h1>
+            <div class="btns2">
+                <div class="container2">
+                    <div class="btns__menu2">
+                        <button class="btn home">ALL</button>
+                        <button class="btn about">ECO BAG</button>
+                        <button class="btn skills">COFFEE</button>
+                        <button class="btn works">PHONE CASE</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="img1">
+            <img src="img/에코백.png" alt="">
+            <img src="img/상자.png" alt="">
+            <img src="img/케이스.png" alt="">
+        </h1>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrapper">
+            <h1 class="first">PLAY MY YOUTUBE</h1>
+            <div class="btns2">
+                <div class="container2">
+                    <div class="btns__menu2">
+                        <button class="btn home">LET'S SEE MY VIDEOS</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="img2">
+            <img src="img/영상.png" alt="">
+            </h1>
+        </div>
+    </section>
+    <section id="works">
+        <div class="wrapper">
+            <h1 class="first">THIS IS MY WORKS</h1>
+            <div class="btns2">
+                <div class="container2">
+                    <div class="btns__menu2">
+                        <button class="btn home">MY BRAND DESIGN</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="img3">
+            <img src="img/흑인.png" alt="">
+            </h1>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="wrapper">
+            <h1 class="first">MY SNS</h1>
+            <div class="btns2">
+                <div class="container2">
+                    <div class="btns__menu2">
+                        <button class="btn home">JOIN WITH ME</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="img4">
+                <img src="img/naver.png" alt="">
+                <img src="img/youtube.png" alt="">
+                <img src="img/insta.png" alt="">
+            </h1>
+            <h1 class="img5">
+                <img src="img/last kiss.png" alt="">
+            </h1>
+        </div>
+    </section>
+
+    <button class="arrow-up">
+        <span class="material-symbols-outlined">
+            arrow_upward
+        </span>
+    </button>
+
+    <script>
+        const btnHome = document.querySelector('.home');
+        const sectionHome = document.querySelector('#home');
+        // btnHome.addEventListener('click',function() {명령})
+        btnHome.addEventListener('click',function() {
+            sectionHome.scrollIntoView({behavior:"smooth",block:"center"});
+        });
+        
+        const btnAbout = document.querySelector('.about');
+        const sectionAbout = document.querySelector('#about');
+        // btnHome.addEventListener('click',function() {명령})
+        btnAbout.addEventListener('click',function() {
+            sectionAbout.scrollIntoView({behavior:"smooth",block:"center"});
+        });
+
+        const btnSkills = document.querySelector('.skills');
+        const sectionSkills = document.querySelector('#skills');
+        // btnHome.addEventListener('click',function() {명령})
+        btnSkills.addEventListener('click',function() {
+            sectionSkills.scrollIntoView({behavior:"smooth",block:"center"});
+        });
+
+        const btnWorks = document.querySelector('.works');
+        const sectionWorks = document.querySelector('#works');
+        // btnHome.addEventListener('click',function() {명령})
+        btnWorks.addEventListener('click',function() {
+            sectionWorks.scrollIntoView({behavior:"smooth",block:"center"});
+        });
+
+        const btnContact = document.querySelector('.contact');
+        const sectionContact = document.querySelector('#contact');
+        // btnHome.addEventListener('click',function() {명령})
+        btnContact.addEventListener('click',function() {
+            sectionContact.scrollIntoView({behavior:"smooth",block:"center"});
+        });
+
+// 버튼과 화살표 요소를 선택합니다.
+const btns = document.querySelector('.btns');
+const arrowUp = document.querySelector('.arrow-up');
+
+// 화살표를 클릭하면 페이지의 맨 위로 부드럽게 스크롤합니다.
+arrowUp.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 스크롤 이벤트를 추가하여 버튼과 화살표를 표시 또는 숨깁니다.
+window.addEventListener('scroll', function() {
+    // 스크롤된 위치를 확인합니다.
+    const scrollY = window.scrollY || window.pageYOffset;
+    
+    // 스크롤 위치가 300보다 큰 경우 버튼과 화살표를 보여줍니다.
+    if (scrollY > 300) {
+        btns.style.transform = 'translateY(0)';
+        arrowUp.classList.add('show');
+    } else {
+        // 그렇지 않으면 숨깁니다.
+        btns.style.transform = 'translateY(-100%)';
+        arrowUp.classList.remove('show');
+    }
+});
+       
+
+
+    </script>
+    
+</body>
+
+</html>
